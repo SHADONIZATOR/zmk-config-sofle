@@ -67,14 +67,6 @@
 
         Main {
             label = "Main";
-
-            // --------------------------------------------------------------------------------------------------------------------
-            // |  `    |  1  |  2  |  3   |  4   |  5   |                           |  6   |  7    |  8    |  9   |   0   |       |
-            // |  ESC  |  Q  |  W  |  E   |  R   |  T   |                           |  Y   |  U    |  I    |  O   |   P   | BKSPC |
-            // |  TAB  |  A  |  S  |  D   |  F   |  G   |                           |  H   |  J    |  K    |  L   |   ;   |   '   |
-            // | SHIFT |  Z  |  X  |  C   |  V   |  B   |  MUTE  |        | RGB_TOG |  N   |  M    |  ,    |  .   |   /   | SHIFT |
-            //               | GUI | ALT  | CTRL | LOWER|  ENTER |        |  SPACE  | RAISE| CTRL  | ALT   | GUI  |
-
             bindings = <
 &kp ESCAPE      &kp N1  &kp N2          &kp N3        &kp N4        &kp N5                                &kp N6        &kp N7         &kp N8         &kp N9   &kp N0    &kp BACKSPACE
 &kp TAB         &kp Q   &kp W           &kp E         &kp R         &kp T                                 &kp Y         &kp U          &kp I          &kp O    &kp P     &kp MINUS
@@ -82,21 +74,11 @@
 &kp LCTRL       &kp Z   &kp X           &kp C         &kp V         &kp B   &kp DEL      &rgb_ug RGB_TOG  &kp N         &kp M          &kp COMMA      &kp DOT  &kp FSLH  &kp EQUAL
                         &Left_add_lock  &kp LEFT_WIN  &kp LEFT_ALT  &mo 1   &kp SPACE    &kp SPACE        &Numpad_lock  &kp RIGHT_ALT  &kp RIGHT_GUI  &trans
             >;
-
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
         };
 
         Left_lb {
             label = "Left_lb";
-
-            // TODO: Some binds are waiting for shifted keycode support.
-            // ------------------------------------------------------------------------------------------------------------
-            // |       |  F1 |  F2 |  F3  |  F4  |  F5  |                   |  F6  |  F7   |  F8   |  F9  |  F10  |  F11  |
-            // | `     |   1 |   2 |   3  |   4  |   5  |                   |   6  |   7   |   8   |   9  |    0  |  F12  |
-            // |       |  !  |  @  |  #   |  $   |  %   |                   |  ^   |  &    |  *    |  (   |   )   |   |   |
-            // |       |  =  |  -  |  +   |  {   |  }   |        |  |       |  [   |  ]    |  ;    |  :   |   \   |       |
-            //               |     |      |      |      |        |  |       |      |       |       |      |
-
             bindings = <
 &kp GRAVE         &kp NUMBER_6       &kp N7             &kp N8           &kp NUMBER_9      &kp NUMBER_0                          &kp F1         &kp F2          &kp F3          &kp F4           &kp F5            &kp F6
 &kp CAPS          &kp LS(LA(LC(M)))  &kp LS(LA(LC(D)))  &kp C_PREVIOUS   &kp C_PLAY_PAUSE  &kp C_NEXT                            &kp F7         &kp F8          &kp F9          &kp F10          &kp F11           &kp F12
@@ -104,20 +86,11 @@
 &kp LEFT_CONTROL  &kp N              &kp O              &kp P            &kp N             &kp M         &trans       &trans     &kp PAGE_DOWN  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans            &trans
                                      &kp BACKSPACE      &kp PRINTSCREEN  &kp LG(LC(V))     &trans        &kp ENTER    &kp ENTER  &trans         &kp RIGHT_ALT   &trans          &trans
             >;
-
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
         };
 
         Numpad {
             label = "Numpad";
-
-            // ------------------------------------------------------------------------------------------------------------
-            // |BTCLR| BT1  | BT2  |  BT3  |  BT4  |  BT5 |                |      |      |       |      |       |       |
-            // |     | INS  | PSCR | GUI   |       |      |                | PGUP |      |   ^   |      |       |       |
-            // |     | ALT  | CTRL | SHIFT |       | CAPS |                | PGDN |   <- |   v   |  ->  |  DEL  | BKSPC |
-            // |     | UNDO | CUT  | COPY  | PASTE |      |      |  |      |      |      |       |      |       |       |
-            //              |      |       |       |      |      |  |      |      |      |       |      |
-
             bindings = <
 &studio_unlock   &rgb_ug RGB_BRI  &rgb_ug RGB_BRD  &rgb_ug RGB_HUI            &rgb_ug RGB_HUD        &rgb_ug RGB_TOG                                       &kp KP_NUMLOCK  &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_DIVIDE    &trans
 &rgb_ug RGB_SAI  &rgb_ug RGB_SPI  &rgb_ug RGB_EFF  &kp LS(LA(LC(LESS_THAN)))  &kp LS(LA(LC(SLASH)))  &kp LS(LA(LC(GREATER_THAN)))                          &trans          &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_MULTIPLY  &trans
@@ -125,11 +98,11 @@
 &bt BT_CLR       &bt BT_SEL 0     &bt BT_SEL 1     &bt BT_SEL 2               &bt BT_SEL 3           &bt BT_SEL 4                  &trans       &trans     &trans          &kp KP_EQUAL     &kp KP_NUMBER_0  &kp KP_DOT       &kp KP_PLUS      &trans
                                   &trans           &trans                     &trans                 &trans                        &kp ENTER    &kp ENTER  &trans          &trans           &trans           &trans
             >;
-
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
         };
 
         Left_add {
+            label = "Left_add";
             bindings = <
 &kp F1             &kp F2             &kp F3             &kp F4             &kp F5   &kp F6                           &trans  &trans  &trans  &trans  &trans  &trans
 &kp F7             &kp F8             &kp F9             &kp F10            &kp F11  &kp F12                          &trans  &trans  &trans  &trans  &trans  &trans
@@ -137,14 +110,11 @@
 &kp LC(LA(LS(H)))  &kp LC(LA(LS(B)))  &kp LC(LA(LS(S)))  &kp LC(LA(LS(F)))  &trans   &trans   &trans       &trans     &trans  &trans  &trans  &trans  &trans  &trans
                                       &trans             &trans             &trans   &trans   &kp ENTER    &kp ENTER  &trans  &trans  &trans  &trans
             >;
-
-            label = "Left_add";
-            sensor-bindings =
-                <&inc_dec_kp C_VOL_UP C_VOLUME_DOWN>,
-                <&inc_dec_kp PG_UP PAGE_DOWN>;
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOLUME_DOWN &inc_dec_kp PG_UP PAGE_DOWN>;
         };
 
         reserved1 {
+            status = "reserved";
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
@@ -155,6 +125,7 @@
         };
 
         reserved2 {
+            status = "reserved";
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
@@ -165,6 +136,7 @@
         };
 
         reserved3 {
+            status = "reserved";
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
