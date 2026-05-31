@@ -67,6 +67,8 @@
             label = "ENCODER_MOUSE_HORIZONTAL";
             #sensor-binding-cells = <0>;
             bindings = <&mmv MOVE_X(100)>, <&mmv MOVE_X(-100)>;
+
+            tap-ms = <20>;
         };
 
         Encoder_mouse_vertical: Encoder_mouse_vertical {
@@ -74,6 +76,8 @@
             label = "ENCODER_MOUSE_VERTICAL";
             #sensor-binding-cells = <0>;
             bindings = <&mmv MOVE_Y(-100)>, <&mmv MOVE_Y(100)>;
+
+            tap-ms = <20>;
         };
     };
 
