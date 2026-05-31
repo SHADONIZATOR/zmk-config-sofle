@@ -79,6 +79,13 @@
 
             tap-ms = <20>;
         };
+
+        test: test {
+            compatible = "zmk,behavior-sensor-rotate-var";
+            label = "TEST";
+            #sensor-binding-cells = <2>;
+            bindings = <&mmv>, <&mmv>;
+        };
     };
 
     keymap {
@@ -95,7 +102,7 @@
             >;
 
             sensor-bindings =
-                <&Encoder_mouse_horizontal>,
+                <&test MOVE_X(300) MOVE_X(-300)>,
                 <&Encoder_mouse_vertical>;
         };
 
