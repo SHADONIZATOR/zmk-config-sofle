@@ -75,7 +75,7 @@
 &kp LCTRL       &kp Z   &kp X           &kp C         &kp V         &kp B   &kp DEL      &rgb_ug RGB_TOG  &kp N         &kp M          &kp COMMA      &kp DOT  &kp FSLH  &kp EQUAL
                         &Left_add_lock  &kp LEFT_WIN  &kp LEFT_ALT  &mo 1   &kp SPACE    &kp SPACE        &Numpad_lock  &kp RIGHT_ALT  &kp RIGHT_GUI  &trans
             >;
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
+            sensor-bindings = <&mmv MOVE_Y(-10) &mmv MOVE_Y(10) &inc_dec_kp MOVE_X(10)>;
         };
 
         Left_lb {
@@ -87,7 +87,7 @@
 &kp LEFT_CONTROL  &kp N              &kp O              &kp P            &kp N             &kp M         &trans       &trans     &kp PAGE_DOWN  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans            &trans
                                      &kp BACKSPACE      &kp PRINTSCREEN  &kp LG(LC(V))     &trans        &kp ENTER    &kp ENTER  &trans         &kp RIGHT_ALT   &trans          &trans
             >;
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &mmv MOVE_X(-10) PG_DN>;
         };
 
         Numpad {
