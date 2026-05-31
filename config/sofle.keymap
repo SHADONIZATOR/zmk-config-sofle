@@ -66,7 +66,7 @@
             compatible = "zmk,behavior-sensor-rotate";
             label = "ENCODER_MOUSE_HORIZONTAL";
             #sensor-binding-cells = <0>;
-            bindings = <&mmv MOVE_X(-500)>, <&mmv MOVE_X(500)>;
+            bindings = <&mmv MOVE_X(-750)>, <&mmv MOVE_X(750)>;
 
             tap-ms = <50>;
         };
@@ -75,7 +75,7 @@
             compatible = "zmk,behavior-sensor-rotate";
             label = "ENCODER_MOUSE_VERTICAL";
             #sensor-binding-cells = <0>;
-            bindings = <&mmv MOVE_Y(-500)>, <&mmv MOVE_Y(500)>;
+            bindings = <&mmv MOVE_Y(750)>, <&mmv MOVE_Y(-750)>;
 
             tap-ms = <50>;
         };
