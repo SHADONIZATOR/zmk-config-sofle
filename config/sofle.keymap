@@ -59,34 +59,25 @@
             compatible = "zmk,behavior-tap-dance";
             label = "LEFT_FS";
             #binding-cells = <0>;
-            bindings = <&kp DELETE>, <&tog 3>;
+            bindings = <&kp DELETE>, <&mo 3>;
         };
 
         Encoder_mouse_horizontal: Encoder_mouse_horizontal {
             compatible = "zmk,behavior-sensor-rotate";
             label = "ENCODER_MOUSE_HORIZONTAL";
             #sensor-binding-cells = <0>;
-            bindings = <&mmv MOVE_X(100)>, <&mmv MOVE_X(-100)>;
+            bindings = <&mmv MOVE_X(-500)>, <&mmv MOVE_X(500)>;
 
-            tap-ms = <20>;
+            tap-ms = <150>;
         };
 
         Encoder_mouse_vertical: Encoder_mouse_vertical {
             compatible = "zmk,behavior-sensor-rotate";
             label = "ENCODER_MOUSE_VERTICAL";
             #sensor-binding-cells = <0>;
-            bindings = <&mmv MOVE_Y(-100)>, <&mmv MOVE_Y(100)>;
+            bindings = <&mmv MOVE_Y(-500)>, <&mmv MOVE_Y(500)>;
 
-            tap-ms = <20>;
-        };
-
-        test: test {
-            compatible = "zmk,behavior-sensor-rotate-var";
-            label = "TEST";
-            #sensor-binding-cells = <2>;
-            bindings = <&mmv>, <&mmv>;
-
-            tap-ms = <200>;
+            tap-ms = <150>;
         };
     };
 
@@ -104,7 +95,7 @@
             >;
 
             sensor-bindings =
-                <&test MOVE_X(300) MOVE_X(-300)>,
+                <&Encoder_mouse_horizontal>,
                 <&Encoder_mouse_vertical>;
         };
 
